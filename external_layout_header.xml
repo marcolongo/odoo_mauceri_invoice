@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<t t-name="report.external_layout_header">
+	<div class="header">
+		<div class="row">
+			<div class="col-xs-1">
+				<img t-if="company.logo" t-att-src="'data:image/png;base64,%s' % company.logo" style="max-height:120px;"/>
+			</div>
+			<div class="col-xs-3 col-xs-offset-2" style="margin-top:20px;" t-field="company.rml_header1">
+				<div style="font-size:10px" t-field="company.partner_id"/>
+				<p style="font-size:10px"> <span t-field="company.zip"/>  <span t-field="company.city"/> - <span t-field="company.street"/><br /> tel.  <span t-field="company.phone"/>  <br /> fax <span t-field="company.fax"/><br />  <span t-field="company.email"/> <br />  <span t-field="company.website"/></p>
+			</div>
+			<div class="col-xs-3 col-xs-offset-3"  style="margin-top: 20px;" >
+				<p style="font-size:10px"> Part.iva e cod. fisc. <span t-field="company.vat"/><br /> cod. iso <span t-field="company.vat"/> - cod. rea 0787639<br />capitale sociale interamente versato € 26.000,00 </p>
+			</div>
+		</div>
+		<div class="row zero_min_height">
+			<div class="col-xs-12">
+				<div style="border-bottom: 1px solid black;"/>
+			</div>
+		</div>
+		<div class="row">
+
+		</div>
+	</div>
+</t>
