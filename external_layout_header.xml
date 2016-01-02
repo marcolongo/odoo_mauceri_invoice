@@ -2,10 +2,10 @@
 <t t-name="report.external_layout_header">
 	<div class="header">
 		<div class="row">
-			<div class="col-xs-1">
-				<img t-if="company.logo" t-att-src="'data:image/png;base64,%s' % company.logo" style="max-height:120px;"/>
+			<div class="col-xs-3">
+				<img t-if="company.logo" t-att-src="'data:image/png;base64,%s' % company.logo" style="max-height:120px; max-width: 120px; width: 120px;height:120px;"/>
 			</div>
-			<div class="col-xs-3 col-xs-offset-2" style="margin-top:20px;" t-field="company.rml_header1">
+			<div class="col-xs-3" style="margin-top:20px;" t-field="company.rml_header1">
 				<div style="font-size:10px" t-field="company.partner_id"/>
 				<p style="font-size:10px"> <span t-field="company.zip"/>  <span t-field="company.city"/> - <span t-field="company.street"/><br /> tel.  <span t-field="company.phone"/>  <br /> fax <span t-field="company.fax"/><br />  <span t-field="company.email"/> <br />  <span t-field="company.website"/></p>
 			</div>
