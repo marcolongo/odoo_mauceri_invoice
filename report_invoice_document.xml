@@ -5,69 +5,71 @@
 			<div class="row">
 				<div class="col-xs-5 col-xs-offset-0" style="border:1px dotted gray;">
 					<p style="font-size:8px"> sett.le</p>
-					<address style="margin-top:20px;" t-field="o.partner_id"
+					<address style="margin-top:20px;font-size:8px" t-field="o.partner_id"
 						t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: true}" />
-					<span t-if="o.partner_id.vat">
-						VAT:
-						<span t-field="o.partner_id.vat" />
+					<span t-if="o.partner_id.vat" style="font-size:12px" >
+						Partita IVA:
+						<span t-field="o.partner_id.vat" style="font-size:12px" />
 					</span>
 				</div>
 				<div class="col-xs-5 col-xs-push-2" style="border:1px dotted gray;">
 					<p style="font-size:8px">destinazione se diversa dal destinatario</p>
 				</div>
 			</div>
-			<div class="row mt32 mb0">
-				<div class="col-xs-1" style="background-color:#D8D8D8; border:1px solid black;line-height:100%;min-height:30px;">
+			<div class="row mt16 mb0">
+				<div class="col-xs-2" style="background-color:#D8D8D8; border:1px solid black;line-height:100%;min-height:30px;">
 					<strong style="font-size:8px;position: absolute;left:0">Tipo doc:</strong><br />
 					<p
-						t-if="o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">Invoice</p>
-					<p t-if="o.type == 'out_invoice' and o.state == 'proforma2'">PRO-FORMA</p>
-					<p t-if="o.type == 'out_invoice' and o.state == 'draft'">Bozza</p>
-					<p t-if="o.type == 'out_invoice' and o.state == 'cancel'">Cancellata</p>
-					<p t-if="o.type == 'out_refund'">Refund</p>
-					<p t-if="o.type == 'in_refund'">Supplier Refund</p>
-					<p t-if="o.type == 'in_invoice'">Supplier Invoice</p>
+						t-if="o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')" style="font-size:12px">Invoice</p>
+					<p t-if="o.type == 'out_invoice' and o.state == 'proforma2'" style="font-size:12px">PRO-FORMA</p>
+					<p t-if="o.type == 'out_invoice' and o.state == 'draft'" style="font-size:12px">Bozza</p>
+					<p t-if="o.type == 'out_invoice' and o.state == 'cancel'" style="font-size:12px">Cancellata</p>
+					<p t-if="o.type == 'out_refund'" style="font-size:12px">Refund</p>
+					<p t-if="o.type == 'in_refund'" style="font-size:12px">Supplier Refund</p>
+					<p t-if="o.type == 'in_invoice'" style="font-size:12px">Supplier Invoice</p>
 				</div>
-				<div class="col-xs-1" style="background-color:#D8D8D8; border:1px solid black;line-height:100%;min-height:30px;">
+				<div class="col-xs-2" style="background-color:#D8D8D8; border:1px solid black;line-height:100%;min-height:30px;">
 					<strong style="font-size:8px;position: absolute;left:0" >Numero:</strong><br />
-					<p t-field="o.number" />
+					<p t-field="o.number" style="font-size:12px" />
 				</div>
 				<div class="col-xs-2" style="background-color:#D8D8D8; border:1px solid black;line-height:100%;min-height:30px;">
 					<strong style="font-size:8px;position: absolute;left:0">Invoice Date:</strong><br />
-					<p t-field="o.date_invoice" style="text-align: center;" />
+					<p t-field="o.date_invoice" style="text-align: center; font-size:12px"  />
 				</div>
-				<div class="col-xs-1"  style="border:1px solid black;line-height:100%;min-height:40px;">
+				<div class="col-xs-2"  style="border:1px solid black;line-height:100%;min-height:40px;">
 					<strong style="font-size:8px;position: absolute;left:0">Ordine N:</strong><br />
-					<p t-field="o.reference" />
-				</div>
-                <div class="col-xs-2"  style="border:1px solid black;line-height:100%;min-height:40px;">
-					<strong style="font-size:8px;position: absolute;left:0">Consegna a mezzo:</strong><br />
-					<!--<p t-field="o.reference" />-->
-				</div>
-                <div class="col-xs-2"  style="border:1px solid black;line-height:100%;min-height:40px;">
-					<strong style="font-size:8px;position: absolute;left:0">Condizioni di pagamento:</strong><br />
-					<p t-field="o.payment_term" />
+					<p t-field="o.reference" style="font-size:12px"/>
 				</div>
                  <div class="col-xs-1"  style="border:1px solid black;line-height:100%;min-height:40px;">
 					<strong style="font-size:8px;position: absolute;left:0">Zona:</strong><br />
                   <!-- <p t-field="o.payment_term" /> -->
 				</div> 
-				 <div class="col-xs-2"  style="border:1px solid black;line-height:100%;min-height:40px;">
+				 <div class="col-xs-3"  style="border:1px solid black;line-height:100%;min-height:40px;">
 					<strong style="font-size:8px;position: absolute;left:0">Agente:</strong><br />
-                     <p t-field="o.user_id" />
+                     <p t-field="o.user_id" style="font-size:12px"/>
 				</div>            
+			</div>
+			<div class="row  mt0 mb0">
+			     <div class="col-xs-6"  style="border:1px solid black;line-height:100%;min-height:40px;">
+					<strong style="font-size:8px;position: absolute;left:0">Condizioni di pagamento:</strong><br />
+					<p t-field="o.payment_term" style="font-size:12px" />
+				</div>
+                <div class="col-xs-6"  style="border:1px solid black;line-height:100%;min-height:40px;">
+					<strong style="font-size:8px;position: absolute;left:0">Consegna a mezzo:</strong><br />
+					<!--<p t-field="o.reference" />-->
+				</div>
 			</div>
 			<div class="row  mt0 mb0">
 				<div class="col-xs-7"  style="border:1px solid black;line-height:100%;min-height:40px;">
 					<strong style="font-size:8px;position: absolute;left:0">Informazioni aggiuntive:</strong><br />
-					<p t-field="o.comment" />
+					<p t-field="o.comment" style="font-size:12px"	 />
 				</div>
 				<div class="col-xs-5"  style="border:1px solid black;line-height:100%;min-height:40px;">
 					<strong style="font-size:8px;position: absolute;left:0">Banca d'appoggio:</strong><br />
 <!-- 					<p t-field="o.comment" /> -->
 				</div>
 			</div>
-			<div class="row  mt0 mb32">
+			<div class="row  mt0 mb16">
 				<div class="col-xs-2"  style="border:1px solid black;line-height:100%;min-height:40px;">
 					<strong style="font-size:8px;position: absolute;left:0">Causale del vettore:</strong><br />
 <!-- 					<p t-field="o.comment" /> -->
@@ -94,7 +96,9 @@
 				</div>
 			</div>
 
-			<table class="table table-condensed">
+          <!-- 	Linee fattura -->
+
+			<table class="table table-condensed" style="height: 575px">
 				<thead>
 					<tr>
 					    <th>Codice art.lo</th>
@@ -106,109 +110,141 @@
 						<th class="text-right">Amount</th>
 					</tr>
 				</thead>
-				<tbody class="invoice_tbody">
-					<tr t-foreach="o.invoice_line" t-as="l">
+				<tbody class="invoice_tbody" >
+					<tr t-foreach="o.invoice_line" t-as="l" style="max-height: 31px;">
 					    <td>
-							<span t-field="l.product_id.default_code" />
+							<span t-field="l.product_id.default_code" style="font-size:10px;line-height:80%;padding-top:0px;" />
 						</td>
 						<td>
-							<span t-field="l.name" />
+							<span t-field="l.name" style="font-size:10px;line-height:80%;padding-top:0px;" />
 						</td>
 						<td>
-							<span t-field="l.quantity" />
-							<span t-field="l.uos_id" groups="product.group_uom" />
+							<span t-field="l.quantity" style="font-size:10px;line-height: 80%;"/>
+							<span t-field="l.uos_id" groups="product.group_uom" style="font-size:12px;line-height:80%;padding-top:0px;" />
 						</td>
 						<td class="text-right">
-							<span t-field="l.price_unit" />
+							<span t-field="l.price_unit" style="font-size:10px;line-height:80%;padding-top:0px;"/>
 						</td>
 						<td class="text-right" groups="sale.group_discount_per_so_line">
-							<span t-field="l.discount" />
+							<span t-field="l.discount" style="font-size:10px;line-height:80%;padding-top:0px;"/>
 						</td>
 						<td class="text-right">
 							<!--<span t-esc="', '.join(map(lambda x: x.name, l.invoice_line_tax_id))" />-->
-                                                         <span t-field=" l.product_id.taxes_id.description" />
+                            <span t-field=" l.product_id.taxes_id.description"  style="font-size:10px;line-height:80%;padding-top:0px;"/>
 						</td>
 						<td class="text-right">
-							<span t-field="l.price_subtotal"
+							<span t-field="l.price_subtotal"  style="font-size:10px;line-height:80%;padding-top:0px;"
 								t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}" />
 						</td>
 					</tr>
+					<tr style="height: 100%;max-height: 350px;">
+					</tr>
 				</tbody>
+				
 			</table>
-
-			<div class="row">
-				<div class="col-xs-4 pull-right">
-					<table class="table table-condensed">
-						<tr class="border-black">
-							<td>
-								<strong>Total Without Taxes</strong>
-							</td>
-							<td class="text-right">
-								<span t-field="o.amount_untaxed"
-									t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}" />
-							</td>
-						</tr>
-						<tr>
-							<td>Taxes</td>
-							<td class="text-right">
-								<span t-field="o.amount_tax"
-									t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}" />
-							</td>
-						</tr>
-						<tr class="border-black">
-							<td>
-								<strong>Total</strong>
-							</td>
-							<td class="text-right">
-								<span t-field="o.amount_total"
-									t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}" />
-							</td>
-						</tr>
-					</table>
+			<div style="position:absolute;opacity:0.25;font-size:3em;left: 0px;top: 800px;text-align:center;z-index:1000;">
+                                           <img id="my-img" src="/web/static/images/mottura.jpg"/>
+                         </div>
+                        <div style="position:absolute;opacity:0.25;font-size:3em;left: 174px;top: 800px;text-align:center;z-index:1000;">
+                                           <img id="my-img" src="/web/static/images/agb.jpg"/>
+                        </div>
+                        <div style="position:absolute;opacity:0.25;font-size:3em;left: 338px;top: 800px;text-align:center;z-index:1000;">
+                                           <img id="my-img" src="/web/static/images/friulsider.jpg"/>
+                        </div>
+						<div style="position:absolute;opacity:0.25;font-size:3em;left: 517px;top: 800px;text-align:center;z-index:1000;">
+                                           <img id="my-img" src="/web/static/images/stanley.jpg"/>
+                        </div>
+						<div style="position:absolute;opacity:0.25;font-size:3em;left: 691px;top: 800px;text-align:center;z-index:1000;">
+                                           <img id="my-img" src="/web/static/images/dewalt.jpg"/>
+                        </div>
+			<!--Dopo le linee della fattura  -->
+			
+			<div class="row  mt4 mb0">
+				<div class="col-xs-2"  style="border:1px solid black;line-height:100%;min-height:40px;text-align: right;">
+					<strong style="font-size:8px;position: absolute;left:0">Totale Merce:</strong><br />
+					<span t-field="o.amount_untaxed" t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}" />
+				</div>
+				<div class="col-xs-1"  style="border:1px solid black;line-height:100%;min-height:40px;text-align: right;">
+					<strong style="font-size:8px;position: absolute;left:0">Sconti:</strong><br />
+<!-- 					<span t-field="o.amount_untaxed" t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}" /> -->
+				</div>
+				<div class="col-xs-1"  style="border:1px solid black;line-height:100%;min-height:40px;text-align: right;">
+					<strong style="font-size:8px;position: absolute;left:0">I. sconto:</strong><br />
+<!-- 					<span t-field="o.amount_untaxed" t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}" /> -->
+				</div>
+				<div class="col-xs-2"  style="border:1px solid black;line-height:100%;min-height:40px;text-align: right;">
+					<strong style="font-size:8px;position: absolute;left:0">Importo spese:</strong><br />
+<!-- 					<span t-field="o.amount_untaxed" t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}" /> -->
+				</div>
+				<div class="col-xs-2"  style="border:1px solid black;line-height:100%;min-height:40px;text-align: right;">
+					<strong style="font-size:8px;position: absolute;left:0">Imponibile Iva:</strong><br />
+					<span t-field="o.amount_untaxed" t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}" />
+				</div>
+				<div class="col-xs-2"  style="border:1px solid black;line-height:100%;min-height:40px;text-align: right;">
+					<strong style="font-size:8px;position: absolute;left:0">Aliquota Iva:</strong><br />
+					<span>22%</span>
+				</div>
+				<div class="col-xs-2"  style="border:1px solid black;line-height:100%;min-height:40px;text-align: right;">
+					<strong style="font-size:8px;position: absolute;left:0">Importo Iva:</strong><br />
+					<span t-field="o.amount_tax" t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}" />
+				</div>
+			</div>			
+			<div class="row  mt0 mb0">
+				<div class="col-xs-12"  style="border:1px solid black;line-height:100%;min-height:40px;text-align: right;">
+					<strong style="font-size:8px;position: absolute;left:0">Scadenza /Importo pagamento:</strong><br />
+				</div>
+			</div>
+			<div class="row  mt0 mb0">
+				<div class="col-xs-2"  style="border:1px solid black;line-height:100%;min-height:40px;text-align: right;">
+					<strong style="font-size:8px;position: absolute;left:0">Firma Conducente:</strong><br />
+				</div>
+				<div class="col-xs-2"  style="border:1px solid black;line-height:100%;min-height:40px;text-align: right;">
+					<strong style="font-size:8px;position: absolute;left:0">Firma Destinatario:</strong><br />
+				</div>
+				<div class="col-xs-2"  style="border:1px solid black;line-height:100%;min-height:40px;text-align: right;">
+					<strong style="font-size:8px;position: absolute;left:0">Aspetto esteriore dei beni:</strong><br />
+				</div>
+				<div class="col-xs-1"  style="border:1px solid black;line-height:100%;min-height:40px;text-align: right;">
+					<strong style="font-size:8px;position: absolute;left:0">N. Colli:</strong><br />
+				</div>
+				<div class="col-xs-2"  style="border:1px solid black;line-height:100%;min-height:40px;text-align: right;">
+					<strong style="font-size:8px;position: absolute;left:0">Bolli:</strong><br />
+				</div>
+				<div class="col-xs-3"  style="background-color:#D8D8D8;border:1px solid black;line-height:100%;min-height:40px;text-align: right;">
+					<strong style="font-size:8px;position: absolute;left:0">Totale Fattura:</strong><br />
+					<span t-field="o.amount_total" t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}" />		
 				</div>
 			</div>
 
-			<div class="row" t-if="o.tax_line">
-				<div class="col-xs-6">
-					<table class="table table-condensed">
-						<thead>
-							<tr>
-								<th>Tax</th>
-								<th class="text-right">Base</th>
-								<th class="text-right">Amount</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr t-foreach="o.tax_line" t-as="t">
-								<td>
-									<span t-field="t.name" />
-								</td>
-								<td class="text-right">
-									<span t-field="t.base"
-										t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}" />
-								</td>
-								<td class="text-right">
-									<span t-field="t.amount"
-										t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}" />
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
+<!-- 			<div class="row" t-if="o.tax_line"> -->
+<!-- 				<div class="col-xs-6"> -->
+<!-- 					<table class="table table-condensed"> -->
+<!-- 						<thead> -->
+<!-- 							<tr> -->
+<!-- 								<th>Tax</th> -->
+<!-- 								<th class="text-right">Base</th> -->
+<!-- 								<th class="text-right">Amount</th> -->
+<!-- 							</tr> -->
+<!-- 						</thead> -->
+<!-- 						<tbody> -->
+<!-- 							<tr t-foreach="o.tax_line" t-as="t"> -->
+<!-- 								<td> -->
+<!-- 									<span t-field="t.name" /> -->
+<!-- 								</td> -->
+<!-- 								<td class="text-right"> -->
+<!-- 									<span t-field="t.base" -->
+<!-- 										t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}" /> -->
+<!-- 								</td> -->
+<!-- 								<td class="text-right"> -->
+<!-- 									<span t-field="t.amount" -->
+<!-- 										t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}" /> -->
+<!-- 								</td> -->
+<!-- 							</tr> -->
+<!-- 						</tbody> -->
+<!-- 					</table> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
 
-			<p t-if="o.comment">
-				<strong>Comment:</strong>
-				<span t-field="o.comment" />
-			</p>
-			<p t-if="o.payment_term.note">
-				<strong>Payment Term:</strong>
-				<span t-field="o.payment_term.note" />
-			</p>
-			<p t-if="o.fiscal_position.note">
-				<strong>Fiscal Position Remark:</strong>
-				<span t-field="o.fiscal_position.note" />
-			</p>
 		</div>
 	</t>
 </t>

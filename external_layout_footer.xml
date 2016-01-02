@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<t t-name="report.external_layout_footer">
+    <div class="footer">
+        <div class="text-center" style="border-top: 1px solid black;">
+           <p style="font-size:6px">E' MERCE CONFORME AL D.L. 155/97 - ATTUAZIONE DIRETTIVE 93/43/CEE E 96/3 CE - Contributo CONAI assolto ove dovuto - NON SARANNO ACCETTATI RESI DI MATERIALI TRASCORSI I 12 GIORNI DAL RICEVIMENTO </p>
+
+            <ul class="list-inline">
+                <li >Page:</li>
+                <li><span class="page"/></li>
+                <li>/</li>
+                <li><span class="topage"/></li>
+            </ul>
+        </div>
+    </div>      
+</t>
+
